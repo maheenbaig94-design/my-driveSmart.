@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial,sans-serif;
+        line-height: 1.6;
+        background-color:rgb(251, 249, 249);
+        color: black;
+    }
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .header{
+        background:antiquewhite ;
+        padding: 20px 0;
+        border-bottom: 1px solid white;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .logo span{
+        color: #2563eb;
+    }
+    .nav-links{
+        list-style-type:none;
+        display: flex;
+        gap: 20px;
+    }
+    .nav-links a{
+        text-decoration: none;
+        color:black;
+        font-weight: 500;
+    }
+    .contact-btn{
+        background: black;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+    }
+    .hero{
+        background-image: url(./pexels-hyundaimotorgroup-31212857.jpg);
+        
+        background-size: cover;
+         background-repeat: no-repeat;
+   background-position: center;
+   height: 100vh;
+   width: 100%;
+   
+   align-items: center;
+   padding: 0 2rem;
+   color: white;
+   font-family: Arial,  sans-serif;
+   position: relative;
+   z-index: 0;
+    }
+    .hero h1{
+        font-size: 3rem;
+        padding-top: 100px;
+        
+        margin: 0;
+        text-align: center;
+    
+    }
+    .hero p{
+        text-align: center;
+        margin: 1rem 0;
+        color: white;
+        font-size: 20px;
+    }
+    .hero::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top:0px;
+    left: 0;
+    background-color: rgba(0,0,0,0.55);
+    z-index: 0;
+    
+
+}
+
+    .sales{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.car{
+    background-color: white;
+    border-radius: 8px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px black( 0,0,0.0.2);
+     transition: transform 0.3s;
+
+}
+.car:hover{
+    transform: scale(1.03);
+}
+.car img{
+    width: 100%;
+    height: auto;
+}
+.car h4{
+    padding: 15px;
+    font-size: 20px;
+    color: #333;
+}
+.car button{
+    padding: 10px;
+    border-radius: 2px;
+    border: 20px;
+}
+/* .vehicle{
+    border: 1px solid #333;
+    padding: 20px;
+     background: white;
+        padding: 20px;
+        border-radius: 10px ;
+        margin-top: 20px;
+        border: 1px solid #dedede;
+} */
+.vehicle{
+    background-color: white;
+    border-radius: 8px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px black( 0,0,0.0.2);
+    border: 1px solid #dedede;
+    height: 300px;
+     transition: transform 0.3s;
+    
+}
+.vehicle:hover{
+    transform: scale(1.03);
+}
+.vehicle h4{
+    font-size: 25px;
+}
+.vehicle ul li{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 8px;
+    margin-bottom: 3px;
+}
+.vehicle hr{
+    margin-bottom: 20px;
+}
+.perfect{
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px ;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.drive{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+}
+.link{
+    list-style-type: none;
+    text-align: center;
+    width: 280px;
+    overflow: hidden;
+
+}
+.link h4{
+    font-size: 18px;
+    text-align: left;
+}
+.link li{
+
+    text-align: left;
+    display: flex;
+    justify-content: left;
+}
+hr{
+    width: 100vw;
+}
+.right li{
+    text-align: left;
+    list-style-type: none;
+    display: flex;
+    overflow: hidden;
+
+}
+.footer{
+    background: rgb(21, 21, 46);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    height:100%;
+    
+    
+    
+}
+
+@media (max-width:480px) {
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .nav-links{
+        font-size: 20px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .contact-btn{
+
+        width: 100%;
+        padding: 10px;
+    }
+    .hero{
+        padding: 1rem;
+        height: auto;
+        background-size: cover;
+    }
+    .hero h1{
+        font-size: 2rem;
+        padding-top: 60px;
+        text-align: center;
+    }
+    .hero p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .hero::after{
+        display: none;
+    }
+    .sales, .perfect{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .car, .vehicle, .link{
+        width: 90%;
+
+    }
+    .vehicle{
+        height: auto;
+    }
+    .vehicle h4{
+        font-size: 20px;
+        text-align: center;
+    }
+    .vehicle ul li{
+        font-size: 14px;
+    }
+    .footer{
+        padding: 1rem;
+        font-size: 14px;
+    }
+    .link h4, .link li, .rightli{
+        font-size: 16px;
+        text-align: left;
+    }
+    .link{
+        text-align: left;
+    }
+    .container{
+        width: 95%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <header>
+        <div class="container nav">
+            <h2 class="logo">
+                Drive <span>Smart</span>
+             </h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./vehicles.html">Vehicles</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="contact-btn">Contact Sales</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div><h1>SUV Collection</h1>
+        <p>Explore our range of spacious,versatile
+            SUVs perfect for families and adventures.
+        </p>
+        </div>
+    </section>
+    <section class="class1">
+
+
+        <div class="sales">
+            <div class="vehicle">
+                <button class="btn1">
+                 Search
+                </button>
+                <button class="btn2">
+                    Search
+                </button>
+                
+                <h4>Filter</h4>
+                <ul>
+                    <li>Category           ▪</li>
+                    <hr>
+                    <li>Brand               ▪</li>
+                    <hr>
+                    <li>Price Range         ▪</li>
+                    <hr>
+                    <li>Year              ▪</li>
+                    <hr>
+                </ul>
+
+
+
+            </div>
+
+            <div class="car">
+                <img src="./pexels-bleri-29580174.jpg" alt="">
+                <h4>Mercedes-Benz GLE</h4> 
+                <ul>
+                    <li>✔leather Seats</li>
+                    <li>✔Navigation System</li>
+                    <li>✔Panoromic Roof</li>
+                </ul>
+                <button>View Details</button> 
+            </div>
+
+            <div class="car">   
+                <img src="./pexels-bertellifotografia-10182882.jpg" alt="">
+                <h4>BMW 5 Series</h4>
+                <ul>
+                    <li>✔Heated Seats</li>
+                    <li>✔Premium Sound System </li>
+                    <li>✔Driver Assistance Package</li>
+                </ul>
+                <button>View Details</button>
+            </div>
+            <div class="car">
+                <img src="./pexels-esmihel-26690292.jpg" alt="">
+                <h4>Prosche 911</h4>
+                <ul>
+                    <li>✔Sprort Chrono package </li>
+                    <li>✔Carbon ceramic Brakes</li>
+                    <li>✔Adaptive sports seats</li>
+                </ul>
+                <button>View Details</button>
+
+            </div>
+
+    </section>
+    <section class="footer">
+
+        <div class="perfect">
+
+        
+
+        <div class="drive">
+            <h3>Drive <span>Smart</span></h3>
+            <p>Your premier destination for quality vehciles. <br> we offer a wide selection of cars, SUVs, <br>
+                and trucks to meet your driving needs.
+            </p>
+        </div>
+
+        <div class="link">
+            <h4>Quick links</h4>
+            <ul>
+                <li>Home </li>
+                <li>Vehicles</li>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+        </ul>
+        </div>
+        <div class="link">
+            <h4>Vehicles categories</h4>
+            <ul>
+                <li>SUVs</li>
+                <li>Sedan</li>
+                <li>Sports Cars</li>
+            
+            </ul>
+        </div>
+        <div class="link">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>123 Auto Drive</li>
+                <li>los Angeles,CA 90001</li>
+                <li>Phone:(555) 123-4567</li>
+                <li>Email:info@drivesmart.com</li>
+            </ul>
+        </div>
+        <hr>
+    
+            <div class="right">
+                
+                    ©2025 DriveSmart.All rights reserved.
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+    </section>
+
+    
+    
+</body>
+</html>
