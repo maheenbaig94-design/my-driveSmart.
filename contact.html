@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial,sans-serif;
+        line-height: 1.6;
+        background-color:rgb(251, 249, 249);
+        color: black;
+    }
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .header{
+        background:antiquewhite ;
+        padding: 20px 0;
+        border-bottom: 1px solid white;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .logo span{
+        color: #2563eb;
+    }
+    .nav-links{
+        list-style-type:none;
+        display: flex;
+        gap: 20px;
+    }
+    .nav-links a{
+        text-decoration: none;
+        color:black;
+        font-weight: 500;
+    }
+    .contact-btn{
+        background: black;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+    }
+    .hero{
+        background-image:url(./pexels-mikebirdy-1009873.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+         height: 100vh;
+   width: 100vw;
+   
+   align-items: center;
+   padding: 0 2rem;
+   color: white;
+   font-family: Arial,  sans-serif;
+   position: relative;
+   z-index: 0;
+
+    }
+    .hero h1{
+        font-size: 3rem;
+        padding-top: 100px;
+        
+        margin: 0;
+        text-align: center;
+    
+    }
+    .hero p{
+        text-align: center;
+        margin: 1rem 0;
+        color: white;
+        font-size: 20px;
+    }
+    .hero::after{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0px;
+    left: 0;
+    background-color: rgba(0,0,0,0.55);
+    z-index: 0;
+    
+
+}
+
+    .contact-section{
+        padding: 60px;
+
+    }
+    .container-container{
+        display: flex;
+        flex-wrap: wrao;
+        gap: 40px;
+        margin-top: 10px;
+    }
+    .contact-info{
+        flex: 1;
+        min-width: 300px;
+        margin-top: 10px;
+        
+    }
+    .contact-info h2{
+        margin-bottom: 15px;
+    }
+    .info-box{
+        background: white;
+        padding: 20px;
+        border-radius: 10px ;
+        margin-top: 20px;
+        border: 1px solid #dedede;
+         transition: transform 0.3s;
+
+}
+.info-box:hover{
+    transform: scale(1.03);
+}
+    
+    .contact-form{
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        margin-top: 10px;
+    }
+    .contact-form h2{
+        margin-top: 20px;
+    }
+    .container contact-container{
+        margin-top: 1px;
+    }
+    .contact-form form input,
+    .contact-form form textarea{
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #dedede;
+        border-radius: 6px;    
+    }
+    .contact-form form button{
+        background: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        width: 100%;
+        border-radius: 6px;
+    }
+    .footer{
+        background: #111827;
+        color: white;
+        padding: 4px 20px;
+    }
+    .footer-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .footer h3 span{
+        color: #3b82f6;
+
+    }
+    .foooter h4{
+        margin-bottom: 10px;
+    }
+    .footer ul li a{
+        color: #d1d5db;
+        text-decoration: 30px;
+        list-style-type: none;
+        overflow: hidden;
+    }
+    .footer-bottom{
+        text-align: left;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #9ca3af;
+        list-style-type: none;
+    }
+    hr{
+        width: 100vw;
+        margin-top: 2px;
+    }
+    @media(max-width-480px){
+        .nav{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .nav-links{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .logo{
+            font-size: 2opx;
+
+        }
+        .contact-btn{
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+
+        }
+        .her{
+            padding: 1rem;
+            height: auto;
+            background-size: cover;
+        }
+        .hero h1{
+            font-size: 2rem;
+            padding-top: 60px;
+            text-align: center;
+        }
+        .hero p{
+            font-size: 16px;
+            text-align: center;
+        }
+        .hero::after{
+            display: none;
+        }
+        .contact-section{
+            padding: 30px;
+        }
+        .container-container{
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-info, .contact-info h2{
+            font-size: 20px;
+        }
+        .contact-form form input,
+        .contact-form form textarea{
+            font-size: 14px;
+        }
+        .contact-form form button{
+            font-size: 16px;
+            padding: 10px;
+        }
+        .footer-container{
+            flex-direction: column;
+        }
+        .foooter h3{
+            font-size: 18px;
+        }
+        .footer ul li a{
+            font-size: 14px;
+        }
+        .footer-bottom{
+            font-size: 13px;
+            text-align: center;
+
+        }
+        .container{
+            width: 95%;
+        }
+        hr{
+            width: 100%;
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+</style>
+<body>
+   <header>
+        <div class="container nav">
+            <h2 class="logo">
+                Drive <span>Smart</span>
+             </h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./vehicles.html">Vehicles</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="contact-btn">Contact Sales</button>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>Reach out to our team for any inquires about our
+            vechicles or services.
+            
+        
+        
+        
+        </p>
+    </section>
+    <section class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>
+                    Whether you have questions about a  specific vehicles need assistance with financing
+                    option, or want to schedule a teest drive, our friendly Team
+                    is here to help.
+
+
+                </p>
+                <div class="info-box">
+                    <h3>Call Us</h3>
+                    <p>Sales department: (555) 123-4567</p>
+                    <p>Service department: (555) 123-8870</p>
+                </div>
+                <div class="info-box">
+                    <h3>Email Us</h3>
+                    <p>Sales inquires: sales@drivesmart.com</p>
+                    <p>Customer support: support@drivesmart.com</p>
+                </div>
+                <div class="info-box">
+                    <h3>Visit our Dealership</h3>
+                    <p>123 Auto Drive <br> los Angeles, CA 90001</p>
+                    <p>Bussiness hours: <br>
+                    Mon-Fri:9AM-8PM <br>
+                    Sat:10AM-7PM <br>
+                    Sun:11Am-5PM
+                
+                </p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form>
+                    <Label>Name</Label><input type="text" placeholder="full name" required />
+                    <Label>Email</Label><input type="email" placeholder="Email Address" required />
+                    <Label>Enter Number</Label><input type="tel" placeholder="Phone number" required />
+                    <Label>Enter Message</Label><textarea placeholder="message" required ></textarea>
+                    <button type="submit"> send message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div> 
+                <h3>Drive <span>Smart</span></h3>
+                <p>Your premier destination for quality vehicles.</p>
+            </div>
+            <div>
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href=""> vehicles</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href=""> Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>
+                    Vehcile categories
+
+            </h4>
+            <ul>
+            <li><a href="">SUVs</a></li>
+            <li><a href="">Sedans</a></li>
+            <li><a href="">Sports Cars</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Contact us</h4>
+            <p>123 Auto Drive <br> los Angeles, CA 90001 <br>(555) 123-4567 <br> info@drivesmart.com</p>
+        </div>
+        </div>
+        <hr>
+        
+        <div class="footer-bottom">
+            <p>© 2025 DriveSmart. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+    
+</body>
+</html>
