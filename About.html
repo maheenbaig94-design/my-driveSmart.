@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial,sans-serif;
+        line-height: 1.6;
+        background-color:rgb(251, 249, 249);
+        color: black;
+    }
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .header{
+        background:antiquewhite ;
+        padding: 20px 0;
+        border-bottom: 1px solid white;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .logo span{
+        color: #2563eb;
+    }
+    .nav-links{
+        list-style-type:none;
+        display: flex;
+        gap: 20px;
+    }
+    .nav-links a{
+        text-decoration: none;
+        color:black;
+        font-weight: 500;
+    }
+    .contact-btn{
+        background: black;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+    }
+
+    
+    .hero{
+        background-image: url(./pexels-bleri-29580174.jpg);
+        
+        background-size: cover;
+         background-repeat: no-repeat;
+   background-position: center;
+   height: 100vh;
+   width: 100vw;
+   
+   align-items: center;
+   padding: 0 2rem;
+   color: white;
+   font-family: Arial,  sans-serif;
+   position: relative;
+   z-index: 0;
+    }
+    .hero h1{
+        font-size: 3rem;
+        padding-top: 100px;
+        
+        margin: 0;
+        text-align: center;
+    
+    }
+    .hero p{
+        text-align: center;
+        margin: 1rem 0;
+        color: white;
+        font-size: 20px;
+    }
+    .hero::after{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.55);
+    z-index: 0;
+
+}
+
+    .collection{
+    padding: 2rem;
+    text-align: center;
+
+}
+.collection h1{
+    font-size: 2rem;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+    justify-content: center;
+    margin-top: 100px;
+}
+.container h4{
+    color: rgb(48, 48, 134);
+}
+
+.card{
+    background-color: white;
+    border-radius: 8px;
+ 
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px gray( 0,0,0,0.2);
+    background-color:whitesmoke;
+    transition: transform 0.3s;
+       
+}
+.card:hover{
+    transform: scale(1.03);
+}
+.card  img{
+    width: 100%;
+    height: auto;
+}
+.card p{
+    padding: 16px;
+}
+.card h4{
+    padding: 10px;
+}
+.ready{
+    background: rgb(21, 21, 46);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    height:100%;
+    
+    
+    
+}
+.ready h1{
+    font-size: 3rem;
+}
+.ready p{
+    margin-top: 20px;
+}
+.ready button{
+    margin-top: 20px;
+}
+.perfect{
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px ;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.drive{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+}
+.link{
+    list-style-type: none;
+    text-align: center;
+    width: 280px;
+    overflow: hidden;
+
+}
+.link h4{
+    font-size: 18px;
+    text-align: left;
+}
+.link li{
+
+    text-align: left;
+    display: flex;
+    justify-content: left;
+}
+hr{
+    width: 100vw;
+}
+.right li{
+    text-align: left;
+    list-style-type: none;
+    display: flex;
+    overflow: hidden;
+
+}
+@media(max-width:480){
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .nav-links{
+        flex-direction: colum;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .contact-btn{
+        width: 100%;
+        padding: 10px;
+    }
+    .hero h1{
+        font-size: 2em;
+        padding-top: 60px;
+    }
+    .hero p{
+        font-size: 16px;
+        margin: 0.5rem 0;
+    }
+    .collection h1{
+        font-size: 1.5rem;
+
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .card{
+        width: 90%;
+
+    }
+    .ready h1{
+        font-size: 2rem;
+    }
+    .ready p{
+        font-size: 16px;
+    }
+    .perfect{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .link{
+        width: 90%;
+
+    }
+    .link h4, .link li, .right li{
+        font-size: 16px;
+        text-align: left;
+    }
+    .hero{
+        padding: 1rem;
+        height: auto;
+        background-size: cover;
+    }
+    .hero::after{
+        display: none;
+    }
+
+
+
+    
+
+
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <header>
+        <div class="container nav">
+            <h2 class="logo">
+                Drive <span>Smart</span>
+             </h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./vehicles.html">Vehicles</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="contact-btn">Contact Sales</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div><h1>About DriveSmart</h1>
+        <p>Your trusted partner in finding the perfect vehicles for your lifestyle.</p>
+        </div>
+    </section>
+    <section class="collection">
+        <h1>Our Team</h1>
+        <p>Meet the dedicated proffessionals who make DriveSmart the trusted choice for car 
+            buyers throughout the region.
+        </p>
+        <div class="container">
+            <div class="card">
+                <img src="./Johnson.Michael.jpg" alt="">
+                <h2>Michael johnson</h2>
+                <h4>Founder and CEO</h4>
+                <p>With over 20 years in the automotive industry, Michael founded DriveSmart with a vision to transform car buying.</p>
+            </div>
+            <div class="card">
+                <img src="./sarah-williams-300px-05-2022.jpg" alt="">
+                <h2>Sarah Williams</h2>
+                <h4>Sales Director</h4>
+                <p>Sarah leads our sales team with experties in customer relations and automotive market trends.</p>
+            </div>
+            <div class="card">
+                <img src="./David-Chen-500x500.webp" alt="">
+                <h2>David Chen</h2>
+                <h4>Service Manager</h4>
+                <p>David ensures all vehciles meet our rigorous quality standards before joining our inventory</p>
+            </div>
+            <div class="card">
+                <img src="./jlo-smiling.webp" alt="">
+                <h2>Jenifer lopez</h2>
+                <h4>Finance Mananger</h4>
+                <p>Jennifer works with coustomers to find the best financing solutions tailored to their 
+                    needs
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vehicle">
+        <div class="ready">
+        
+            <h1>Ready to Find Your Perfect Vehicles</h1>
+            <p>Discover our extensive inventory of premium vehicles, or get in touch with our 
+                friendly team to discuss your specific needs.
+            </p>
+            <button>
+                Browse Our Inventory
+
+            </button>
+            <button>
+                Contact Us
+
+            </button>
+            <div class="perfect">
+
+        
+
+        <div class="drive">
+            <h3>Drive <span>Smart</span></h3>
+            <p>Your premier destination for quality vehciles. <br> we offer a wide selection of cars, SUVs, <br>
+                and trucks to meet your driving needs.
+            </p>
+        </div>
+
+        <div class="link">
+            <h4>Quick links</h4>
+            <ul>
+                <li>Home </li>
+                <li>Vehicles</li>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+        </ul>
+        </div>
+        <div class="link">
+            <h4>Vehicles categories</h4>
+            <ul>
+                <li>SUVs</li>
+                <li>Sedan</li>
+                <li>Sports Cars</li>
+            
+            </ul>
+        </div>
+        <div class="link">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>123 Auto Drive</li>
+                <li>los Angeles,CA 90001</li>
+                <li>Phone:(555) 123-4567</li>
+                <li>Email:info@drivesmart.com</li>
+            </ul>
+        </div>
+        <hr>
+    
+            <div class="right">
+                
+                    ©2025 DriveSmart.All rights reserved.
+                    <div class="social icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+
+                    </div>
+                    
+
+
+                
+            
+                
+
+            </div>
+            
+                
+                
+            
+
+
+
+
+        
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
